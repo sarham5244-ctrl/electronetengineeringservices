@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electronet Engineering Services | Perth Electrician | 0415 990 148</title>
+<meta name="description" content="Electronet Engineering Services – Perth's trusted electrician for downlights, ceiling fans, power points, TV points and more. Fast response. Call 0415 990 148.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0B1C2D;
+    --navy-mid: #102236;
+    --navy-light: #1a3650;
+    --blue: #007BFF;
+    --blue-bright: #2e96ff;
+    --blue-glow: rgba(0,123,255,0.18);
+    --white: #ffffff;
+    --grey-light: #f4f6f9;
+    --grey-mid: #cdd5e0;
+    --text-muted: #8fa3bc;
+    --gold: #e8b84b;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --section-pad: 100px 0;
+    --radius: 14px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    padding: 18px 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: background 0.4s, box-shadow 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(11,28,45,0.97);
+    box-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 42px; height: 42px;
+    background: var(--blue);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+  .logo-text { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: var(--white); line-height: 1.1; }
+  .logo-sub { font-size: 0.65rem; color: var(--text-muted); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; }
+  
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--blue-bright); }
+  
+  .nav-cta {
+    background: var(--blue);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600 !important;
+    transition: background 0.2s, transform 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--blue-bright) !important; transform: translateY(-1px); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; transition: 0.3s; }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex; align-items: center;
+    overflow: hidden;
+    background: var(--navy);
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1800&q=80') center/cover no-repeat;
+    opacity: 0.22;
+    transform: scale(1.05);
+    animation: heroBgPan 20s ease-in-out infinite alternate;
+  }
+  @keyframes heroBgPan { from { transform: scale(1.05) translateX(0); } to { transform: scale(1.1) translateX(-2%); } }
+
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(11,28,45,0.97) 0%, rgba(11,28,45,0.7) 60%, rgba(0,60,120,0.3) 100%);
+  }
+
+  /* Animated circuit lines */
+  .circuit-lines {
+    position: absolute; inset: 0;
+    overflow: hidden; pointer-events: none;
+  }
+  .circuit-lines::before {
+    content: '';
+    position: absolute;
+    top: 20%; right: 8%;
+    width: 340px; height: 340px;
+    border: 1px solid rgba(0,123,255,0.15);
+    border-radius: 50%;
+    animation: pulse-ring 4s ease-in-out infinite;
+  }
+  .circuit-lines::after {
+    content: '';
+    position: absolute;
+    top: 20%; right: 8%;
+    width: 220px; height: 220px;
+    margin: 60px;
+    border: 1px solid rgba(0,123,255,0.25);
+    border-radius: 50%;
+    animation: pulse-ring 4s ease-in-out infinite 1s;
+  }
+  @keyframes pulse-ring { 0%,100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.04); opacity: 1; } }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto;
+    padding: 120px 5% 80px;
+    width: 100%;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,123,255,0.15);
+    border: 1px solid rgba(0,123,255,0.3);
+    border-radius: 30px;
+    padding: 7px 16px;
+    color: var(--blue-bright);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    animation: fadeUp 0.8s ease both;
+  }
+  .badge-dot { width: 7px; height: 7px; background: var(--blue-bright); border-radius: 50%; animation: blink 1.5s infinite; }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 22px;
+    animation: fadeUp 0.8s ease 0.15s both;
+  }
+  .hero h1 span { color: var(--blue-bright); }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--grey-mid);
+    font-weight: 400;
+    max-width: 540px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    animation: fadeUp 0.8s ease 0.3s both;
+  }
+
+  .hero-btns {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    animation: fadeUp 0.8s ease 0.45s both;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--blue);
+    color: var(--white);
+    padding: 16px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.25s;
+    box-shadow: 0 4px 24px rgba(0,123,255,0.35);
+  }
+  .btn-primary:hover { background: var(--blue-bright); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,123,255,0.45); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: transparent;
+    color: var(--white);
+    padding: 16px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    transition: all 0.25s;
+  }
+  .btn-secondary:hover { border-color: var(--blue-bright); color: var(--blue-bright); background: rgba(0,123,255,0.08); }
+
+  .hero-stats {
+    display: flex; gap: 40px; flex-wrap: wrap;
+    margin-top: 64px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    animation: fadeUp 0.8s ease 0.6s both;
+  }
+  .stat { }
+  .stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--white); }
+  .stat-num span { color: var(--blue-bright); }
+  .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: var(--section-pad); }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 5%; }
+
+  .section-label {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .section-title.light { color: var(--white); }
+  .section-body { font-size: 1.05rem; color: #5a7a97; line-height: 1.75; max-width: 580px; }
+  .section-body.light { color: var(--grey-mid); }
+
+  /* reveal animation */
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ─── ABOUT ─── */
+  .about { background: var(--grey-light); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .about-image-wrap {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .about-image-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, var(--blue), transparent 60%);
+    border-radius: var(--radius);
+    z-index: 1;
+  }
+  .about-image-wrap img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    display: block;
+    position: relative; z-index: 2;
+  }
+  .about-badge {
+    position: absolute;
+    bottom: 28px; right: -18px;
+    background: var(--white);
+    border-radius: 14px;
+    padding: 18px 24px;
+    box-shadow: 0 8px 40px rgba(11,28,45,0.18);
+    z-index: 5;
+    display: flex; align-items: center; gap: 14px;
+    min-width: 190px;
+  }
+  .badge-stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 2px; }
+  .badge-info { }
+  .badge-score { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--navy); }
+  .badge-reviews { font-size: 0.75rem; color: var(--text-muted); }
+
+  .about-text { }
+  .about-checks { margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
+  .check-item { display: flex; align-items: flex-start; gap: 14px; }
+  .check-icon {
+    width: 28px; height: 28px; flex-shrink: 0;
+    background: var(--blue-glow);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--blue); font-size: 0.85rem; margin-top: 2px;
+  }
+  .check-text { font-size: 0.97rem; color: #4a6a85; line-height: 1.55; }
+  .check-text strong { color: var(--navy); }
+
+  /* ─── SERVICES ─── */
+  .services { background: var(--white); }
+  .services-intro { text-align: center; margin-bottom: 60px; }
+  .services-intro .section-body { margin: 0 auto; text-align: center; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: var(--grey-light);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    border: 1.5px solid transparent;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+  }
+  .service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+  .service-card:hover {
+    border-color: rgba(0,123,255,0.2);
+    background: var(--white);
+    box-shadow: 0 12px 48px rgba(11,28,45,0.1);
+    transform: translateY(-4px);
+  }
+  .service-card:hover::after { transform: scaleX(1); }
+
+  .service-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--blue-glow), rgba(0,123,255,0.08));
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+  }
+  .service-card:hover .service-icon { background: linear-gradient(135deg, rgba(0,123,255,0.25), rgba(0,123,255,0.12)); }
+
+  .service-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .service-card p { font-size: 0.9rem; color: #6a87a0; line-height: 1.6; }
+
+  /* ─── WHY CHOOSE ─── */
+  .why { background: var(--navy); position: relative; overflow: hidden; }
+  .why::before {
+    content: '';
+    position: absolute; top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(0,123,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .why-features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .why-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    transition: all 0.3s;
+  }
+  .why-card:hover {
+    background: rgba(0,123,255,0.1);
+    border-color: rgba(0,123,255,0.3);
+    transform: translateY(-3px);
+  }
+  .why-card-icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
+  .why-card h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .why-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+  .why-image {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .why-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    opacity: 0.85;
+    display: block;
+  }
+  .why-image-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(11,28,45,0.7), transparent 60%);
+    border-radius: var(--radius);
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials { background: var(--grey-light); }
+  .testimonials-intro { text-align: center; margin-bottom: 56px; }
+  .testimonials-intro .section-body { margin: 0 auto; }
+
+  .slider-wrap { position: relative; overflow: hidden; }
+  .slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
+  .testimonial-card {
+    flex: 0 0 calc(33.333% - 16px);
+    margin-right: 24px;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 36px 30px;
+    box-shadow: 0 4px 24px rgba(11,28,45,0.08);
+    position: relative;
+  }
+  .testimonial-card::before {
+    content: '\201C';
+    position: absolute;
+    top: 20px; right: 28px;
+    font-size: 5rem;
+    color: var(--blue-glow);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  .stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; margin-bottom: 16px; }
+  .testimonial-card p { font-size: 0.97rem; color: #4a6a85; line-height: 1.75; font-style: italic; margin-bottom: 22px; }
+  .reviewer { display: flex; align-items: center; gap: 12px; }
+  .reviewer-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), #0055cc);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white); font-weight: 700; font-size: 0.85rem;
+    font-family: var(--font-display);
+  }
+  .reviewer-name { font-weight: 600; font-size: 0.92rem; color: var(--navy); }
+  .reviewer-meta { font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+  .google-badge { font-size: 0.7rem; background: #eef3f8; padding: 2px 8px; border-radius: 20px; color: #4285F4; font-weight: 600; }
+
+  .slider-controls { display: flex; justify-content: center; gap: 12px; margin-top: 40px; align-items: center; }
+  .slider-btn {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid var(--grey-mid);
+    background: var(--white);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; color: var(--navy);
+    transition: all 0.2s;
+  }
+  .slider-btn:hover { background: var(--blue); color: var(--white); border-color: var(--blue); }
+  .slider-dots { display: flex; gap: 8px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--grey-mid); cursor: pointer; transition: 0.3s; }
+  .dot.active { background: var(--blue); width: 22px; border-radius: 4px; }
+
+  /* ─── CTA BAND ─── */
+  .cta-band {
+    background: linear-gradient(135deg, var(--blue) 0%, #0050cc 100%);
+    position: relative; overflow: hidden;
+    padding: 80px 0;
+  }
+  .cta-band::before {
+    content: '';
+    position: absolute; top: -100px; left: -100px;
+    width: 400px; height: 400px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .cta-band::after {
+    content: '';
+    position: absolute; bottom: -80px; right: -80px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .cta-band-inner { text-align: center; position: relative; z-index: 2; }
+  .cta-band h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  .cta-band p { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 36px; }
+  .cta-band .btn-white {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--white);
+    color: var(--blue);
+    padding: 18px 36px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.25s;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  }
+  .cta-band .btn-white:hover { transform: translateY(-3px); box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+
+  /* ─── CONTACT ─── */
+  .contact { background: var(--white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+  .contact-info { }
+  .contact-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem; font-weight: 700; color: var(--navy);
+    margin-bottom: 24px;
+  }
+  .contact-detail {
+    display: flex; gap: 16px; align-items: flex-start;
+    margin-bottom: 22px;
+  }
+  .contact-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: var(--blue-glow);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+  .contact-detail-text a { color: var(--blue); font-weight: 600; text-decoration: none; font-size: 1.05rem; }
+  .contact-detail-text a:hover { color: var(--blue-bright); }
+  .contact-detail-text span { font-size: 0.82rem; color: var(--text-muted); display: block; }
+
+  .map-placeholder {
+    background: var(--grey-light);
+    border-radius: var(--radius);
+    height: 200px;
+    margin-top: 28px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    border: 1.5px solid rgba(0,0,0,0.06);
+    position: relative;
+  }
+  .map-placeholder iframe {
+    width: 100%; height: 100%; border: none; border-radius: var(--radius);
+  }
+
+  .contact-form { }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 7px; }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #d8e3ee;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 0.97rem;
+    color: var(--navy);
+    background: var(--grey-light);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px var(--blue-glow);
+    background: var(--white);
+  }
+  .form-group textarea { resize: vertical; min-height: 130px; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: #a0b5ca; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+    box-shadow: 0 4px 18px rgba(0,123,255,0.3);
+  }
+  .btn-submit:hover { background: var(--blue-bright); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,123,255,0.4); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #06131f;
+    color: var(--text-muted);
+    padding: 60px 0 28px;
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 48px; margin-bottom: 48px;
+  }
+  .footer-brand { }
+  .footer-logo-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .footer-logo-icon {
+    width: 40px; height: 40px;
+    background: var(--blue);
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+  .footer-logo-text { font-family: var(--font-display); font-weight: 800; font-size: 1rem; color: var(--white); }
+  .footer-logo-sub { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .footer-desc { font-size: 0.87rem; line-height: 1.75; max-width: 280px; }
+  
+  .footer-col h5 {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+    letter-spacing: 0.04em;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a { color: var(--text-muted); text-decoration: none; font-size: 0.87rem; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--blue-bright); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    font-size: 0.82rem;
+  }
+  .footer-bottom a { color: var(--blue); text-decoration: none; }
+
+  /* ─── MOBILE NAV ─── */
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(11,28,45,0.98);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a { color: var(--white); font-size: 1.4rem; font-family: var(--font-display); font-weight: 700; text-decoration: none; }
+  .mobile-nav .close-btn { position: absolute; top: 24px; right: 24px; font-size: 1.5rem; color: white; cursor: pointer; background: none; border: none; }
+
+  /* ─── RESPONSIVE ─── */
+  @media(max-width: 900px) {
+    .about-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; }
+    .about-image-wrap { order: -1; }
+    .about-badge { right: 12px; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .why-features { }
+    .testimonial-card { flex: 0 0 calc(80% - 16px); }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-cta-desktop { display: none; }
+  }
+  @media(max-width: 600px) {
+    .hero-stats { gap: 24px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-features { grid-template-columns: 1fr; }
+    .testimonial-card { flex: 0 0 calc(95% - 16px); }
+    .footer-top { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    section { padding: 72px 0; }
+  }
+
+  /* Floating call button */
+  .float-call {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    background: #25D366;
+    color: white;
+    width: 58px; height: 58px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+    z-index: 998;
+    transition: all 0.3s;
+    animation: float 3s ease-in-out infinite;
+  }
+  .float-call:hover { transform: scale(1.1); box-shadow: 0 8px 36px rgba(37,211,102,0.5); }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="logo-icon">⚡</div>
+    <div>
+      <div class="logo-text">Electronet</div>
+      <div class="logo-sub">Engineering Services</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:0415990148" class="nav-cta">📞 0415 990 148</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="close-btn" onclick="toggleMobileNav()">✕</button>
+  <a href="#about" onclick="toggleMobileNav()">About</a>
+  <a href="#services" onclick="toggleMobileNav()">Services</a>
+  <a href="#why" onclick="toggleMobileNav()">Why Us</a>
+  <a href="#reviews" onclick="toggleMobileNav()">Reviews</a>
+  <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+  <a href="tel:0415990148" style="color:var(--blue-bright)">📞 0415 990 148</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="circuit-lines"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Perth's Trusted Electrician
+    </div>
+    <h1>Reliable Electrical<br>Solutions <span>Across Perth</span></h1>
+    <p class="hero-sub">Fast Response. Precision Workmanship. Professional Service.<br>From downlights to power points — we've got Perth covered.</p>
+    <div class="hero-btns">
+      <a href="tel:0415990148" class="btn-primary">📞 Call Now – 0415 990 148</a>
+      <a href="#contact" class="btn-secondary">Request a Quote →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">4.5<span>★</span></div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">15<span>+</span></div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">&lt;1<span>hr</span></div>
+        <div class="stat-label">Response Time</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Electrician installing ceiling downlights in Perth">
+        <div class="about-badge">
+          <div>
+            <div class="badge-stars">★★★★★</div>
+            <div class="badge-info">
+              <span class="badge-score">4.5</span>
+              <span class="badge-reviews">15 Google Reviews</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-2">
+        <span class="section-label">About Electronet</span>
+        <h2 class="section-title">Perth's Go-To Electrical Services Team</h2>
+        <p class="section-body">Electronet Engineering Services is a Perth-based electrical business built on responsiveness, precision, and genuine care for every client. Led by Moiz, our team delivers high-quality residential electrical work with the kind of attention to detail that keeps customers coming back — and recommending us to their neighbours.</p>
+        <div class="about-checks">
+          <div class="check-item">
+            <div class="check-icon">✓</div>
+            <p class="check-text"><strong>Fast, reliable response.</strong> We respect your time. When you call, we show up — on time, every time.</p>
+          </div>
+          <div class="check-item">
+            <div class="check-icon">✓</div>
+            <p class="check-text"><strong>Precision workmanship.</strong> Every job is completed to the highest standard, no shortcuts, no compromises.</p>
+          </div>
+          <div class="check-item">
+            <div class="check-icon">✓</div>
+            <p class="check-text"><strong>Professional & friendly.</strong> Moiz and the team communicate clearly, work cleanly, and treat your home with respect.</p>
+          </div>
+          <div class="check-item">
+            <div class="check-icon">✓</div>
+            <p class="check-text"><strong>Perth local, community trusted.</strong> Proudly serving Perth homeowners with fully licensed, safety-first electrical solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-intro reveal">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Our Electrical Services</h2>
+      <p class="section-body">From feature lighting to power point upgrades, we handle all aspects of residential electrical work across Perth with speed and care.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">💡</div>
+        <h3>Downlight Installation</h3>
+        <p>Precision placement of LED downlights for stunning, modern interiors. We handle positioning, wiring, and switch configuration to perfection.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">🌀</div>
+        <h3>Ceiling Fan Installation</h3>
+        <p>Efficient ceiling fan installation and replacement, including fan-light combos. Stay cool with a professional, clean finish every time.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">✨</div>
+        <h3>Chandelier & Feature Lighting</h3>
+        <p>Statement chandeliers and feature lighting installations handled with expertise. We ensure safety, balance, and a flawless finish.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">🔌</div>
+        <h3>Power Point Upgrades</h3>
+        <p>Add, relocate, or upgrade power points throughout your home. USB combo points, double GPOs, and outdoor outlets — we do it all.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📺</div>
+        <h3>TV & Media Point Relocation</h3>
+        <p>Seamless TV antenna point relocation and media outlet installation. Clean cable management for a sleek, modern entertainment setup.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">🔍</div>
+        <h3>Electrical Fault Finding</h3>
+        <p>Fast, accurate fault diagnosis to restore safety and function. Tripped circuits, faulty switches, dead points — we find and fix it.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">🪟</div>
+        <h3>Roller Shutter Connections</h3>
+        <p>Expert electrical connections for motorised roller shutters. Ensuring smooth, reliable operation with correct wiring and safe installation.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">🏠</div>
+        <h3>General Residential Electrical</h3>
+        <p>Your all-in-one Perth electrician for any home electrical need. Safety inspections, rewiring, upgrades — no job too big or too small.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="reveal">
+        <span class="section-label" style="color:var(--blue-bright)">Why Electronet</span>
+        <h2 class="section-title light">Electricians Perth<br>Homeowners Trust</h2>
+        <p class="section-body light" style="margin-bottom:36px">We've built our reputation one satisfied customer at a time. Here's what sets us apart from the rest.</p>
+        <div class="why-features">
+          <div class="why-card">
+            <span class="why-card-icon">⚡</span>
+            <h4>Rapid Response</h4>
+            <p>Many customers report we arrive within the hour. Your electrical issue won't wait — neither do we.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-card-icon">💬</span>
+            <h4>Transparent Comms</h4>
+            <p>Clear quotes upfront. No surprises on your invoice. Moiz keeps you in the loop from first call to finish.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-card-icon">🎯</span>
+            <h4>Attention to Detail</h4>
+            <p>Straight lines, clean finishes, perfect alignment. Our workmanship is a cut above — and it shows.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-card-icon">🛡️</span>
+            <h4>Safety-First Approach</h4>
+            <p>Fully licensed and compliant with Australian standards. Your family's safety is never compromised.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-card-icon">🧹</span>
+            <h4>Clean Workmanship</h4>
+            <p>We leave your home exactly as we found it — just with better electrical. No mess left behind.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-card-icon">🏆</span>
+            <h4>Perth Trusted</h4>
+            <p>4.5-star Google rating with 15 reviews. Real Perth homeowners recommending us to their friends.</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-image reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80" alt="Professional electrician working on residential wiring">
+        <div class="why-image-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="reviews">
+  <div class="container">
+    <div class="testimonials-intro reveal">
+      <span class="section-label">Client Reviews</span>
+      <h2 class="section-title">What Perth Homeowners Say</h2>
+      <p class="section-body">Real experiences from real customers. See why Perth residents choose Electronet again and again.</p>
+    </div>
+    <div class="slider-wrap reveal reveal-delay-1">
+      <div class="slider-track" id="sliderTrack">
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Moiz arrived within the hour of calling. Installed our downlights quickly, cleaned up completely, and the result looked absolutely incredible. Highly recommend to anyone in Perth!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">SL</div>
+            <div>
+              <div class="reviewer-name">Sarah L.</div>
+              <div class="reviewer-meta"><span>Perth, WA</span> <span class="google-badge">Google Review</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Outstanding service from start to finish. Professional, efficient, and genuinely friendly. Installed our chandelier perfectly — the attention to detail was impressive. Won't use anyone else."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">MR</div>
+            <div>
+              <div class="reviewer-name">Mark R.</div>
+              <div class="reviewer-meta"><span>Karrinyup, WA</span> <span class="google-badge">Google Review</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Needed TV points relocated before moving in. Moiz communicated promptly, arrived on time, and did a flawless job. The work was neat, fast, and exactly what we needed. Five stars."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">JT</div>
+            <div>
+              <div class="reviewer-name">Jessica T.</div>
+              <div class="reviewer-meta"><span>Subiaco, WA</span> <span class="google-badge">Google Review</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Friendly and punctual. Fixed our electrical fault in no time at all and explained everything clearly. Pricing was fair and the whole experience was stress-free. Absolutely recommend."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">DK</div>
+            <div>
+              <div class="reviewer-name">David K.</div>
+              <div class="reviewer-meta"><span>Floreat, WA</span> <span class="google-badge">Google Review</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Had ceiling fans installed throughout the house. Every single one was done perfectly — the finish was immaculate. Super polite, hardworking team. Already recommended to two neighbours!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">AW</div>
+            <div>
+              <div class="reviewer-name">Amanda W.</div>
+              <div class="reviewer-meta"><span>Claremont, WA</span> <span class="google-badge">Google Review</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Called late afternoon and they were there same day. Power point upgrades done quickly with zero fuss. Clean, professional and very reasonably priced. Exactly the kind of tradie you want."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">PN</div>
+            <div>
+              <div class="reviewer-name">Peter N.</div>
+              <div class="reviewer-meta"><span>Wembley, WA</span> <span class="google-badge">Google Review</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" onclick="slideLeft()">←</button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button class="slider-btn" onclick="slideRight()">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band-inner reveal">
+      <h2>Need a Reliable Electrician Today?</h2>
+      <p>Fast response across Perth. Call now for a prompt, professional service.</p>
+      <a href="tel:0415990148" class="btn-white">📞 Call 0415 990 148</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:60px;" class="reveal">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Request a Free Quote</h2>
+      <p class="section-body" style="margin:0 auto">Have an electrical job in mind? Fill in the form below and Moiz will get back to you promptly.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Contact Details</h3>
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div class="contact-detail-text">
+            <span>Phone / Call or Text</span>
+            <a href="tel:0415990148">0415 990 148</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div class="contact-detail-text">
+            <span>Service Area</span>
+            <a href="#">Perth, Western Australia</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">⏰</div>
+          <div class="contact-detail-text">
+            <span>Availability</span>
+            <a href="#">Monday – Saturday, 7am – 6pm</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">⭐</div>
+          <div class="contact-detail-text">
+            <span>Google Rating</span>
+            <a href="#">4.5 Stars — 15 Verified Reviews</a>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425862.6059965082!2d115.5766024!3d-31.9523123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32966cdb47bd7f%3A0x504f0b535df55d0!2sPerth%20WA!5e0!3m2!1sen!2sau!4v1700000000000"
+            allowfullscreen="" loading="lazy"
+            title="Perth, Western Australia map">
+          </iframe>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-delay-2">
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" placeholder="04XX XXX XXX" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@email.com">
+          </div>
+          <div class="form-group">
+            <label>Service Required</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>Downlight Installation</option>
+              <option>Ceiling Fan Installation</option>
+              <option>Chandelier / Feature Lighting</option>
+              <option>Power Point Upgrade</option>
+              <option>TV / Media Point Relocation</option>
+              <option>Electrical Fault Finding</option>
+              <option>Roller Shutter Connection</option>
+              <option>General Residential Electrical</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell Us About Your Job</label>
+            <textarea placeholder="Describe your electrical needs, location, and any relevant details..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Request →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <div class="footer-logo-icon">⚡</div>
+          <div>
+            <div class="footer-logo-text">Electronet</div>
+            <div class="footer-logo-sub">Engineering Services</div>
+          </div>
+        </div>
+        <p class="footer-desc">Perth's trusted residential electrician. Fast response, precision workmanship, and professional service you can count on.</p>
+        <p style="margin-top:16px; font-size:0.87rem;"><a href="tel:0415990148" style="color:var(--blue-bright); text-decoration:none; font-weight:600;">📞 0415 990 148</a></p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Downlight Installation</a></li>
+          <li><a href="#services">Ceiling Fan Installation</a></li>
+          <li><a href="#services">Chandelier Lighting</a></li>
+          <li><a href="#services">Power Point Upgrades</a></li>
+          <li><a href="#services">TV Point Relocation</a></li>
+          <li><a href="#services">Fault Finding</a></li>
+          <li><a href="#services">Roller Shutters</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#reviews">Client Reviews</a></li>
+          <li><a href="#contact">Request a Quote</a></li>
+          <li><a href="tel:0415990148">Call Now</a></li>
+        </ul>
+        <h5 style="margin-top:24px;">Location</h5>
+        <p style="font-size:0.87rem; line-height:1.7;">Perth, Western Australia<br>Serving all metro suburbs</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Electronet Engineering Services Pty Ltd. All Rights Reserved. Perth, WA.</span>
+      <span>Licensed Electrician — Western Australia</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating call button -->
+<a href="tel:0415990148" class="float-call" title="Call Electronet Now">📞</a>
+
+<script>
+  // NAV scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+  });
+
+  // Mobile nav
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => observer.observe(r));
+
+  // Testimonial slider
+  let current = 0;
+  const track = document.getElementById('sliderTrack');
+  const cards = track.querySelectorAll('.testimonial-card');
+  const dotsContainer = document.getElementById('sliderDots');
+  
+  const getVisible = () => window.innerWidth < 600 ? 1 : window.innerWidth < 900 ? 1 : 3;
+  const maxSlide = () => cards.length - getVisible();
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    const max = maxSlide();
+    for (let i = 0; i <= max; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === current ? ' active' : '');
+      d.onclick = () => goTo(i);
+      dotsContainer.appendChild(d);
+    }
+  }
+
+  function goTo(n) {
+    current = Math.max(0, Math.min(n, maxSlide()));
+    const cardW = cards[0].offsetWidth + 24;
+    track.style.transform = `translateX(-${current * cardW}px)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function slideLeft() { goTo(current - 1); }
+  function slideRight() { goTo(current + 1); }
+
+  window.addEventListener('resize', () => { current = 0; buildDots(); goTo(0); });
+  buildDots();
+
+  // Auto-slide
+  setInterval(() => {
+    if (current >= maxSlide()) goTo(0);
+    else slideRight();
+  }, 5000);
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-submit');
+    btn.textContent = '✓ Request Sent! Moiz will be in touch soon.';
+    btn.style.background = '#28a745';
+    setTimeout(() => { btn.textContent = 'Send Request →'; btn.style.background = ''; }, 4000);
+  }
+</script>
+</body>
+</html>
