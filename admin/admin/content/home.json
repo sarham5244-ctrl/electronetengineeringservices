@@ -1,5 +1,27 @@
 {
-  "banner_heading": "Welcome to Our Website",
-  "main_text": "We provide amazing services.",
-  "button_text": "Contact Us"
+  "hero": {
+    "badge": "Perth's Trusted Electrician",
+    "title": "Reliable Electrical Solutions Across Perth",
+    "subtitle": "Fast Response. Precision Workmanship. Professional Service.",
+    "call_now": "📞 Call Now – 0415 990 148"
+  },
+  "about": {
+    "label": "About Electronet",
+    "title": "Perth's Go-To Electrical Services Team",
+    "paragraphs": [
+      "Electronet Engineering Services is a Perth-based electrical business built on responsiveness, precision, and genuine care for every client.",
+      "Led by Moiz, our team delivers high-quality residential electrical work with the kind of attention to detail that keeps customers coming back — and recommending us to their neighbours."
+    ],
+    "checks": [
+      {"title": "Fast, reliable response.", "text": "We respect your time. When you call, we show up — on time, every time."},
+      {"title": "Precision workmanship.", "text": "Every job is completed to the highest standard, no shortcuts, no compromises."},
+      {"title": "Professional & friendly.", "text": "Moiz and the team communicate clearly, work cleanly, and treat your home with respect."},
+      {"title": "Perth local, community trusted.", "text": "Proudly serving Perth homeowners with fully licensed, safety-first electrical solutions."}
+    ]
+  },
+  "services": [
+    {"title": "Downlight Installation", "icon": "💡", "description": "..."},
+    {"title": "Ceiling Fans", "icon": "🌀", "description": "..."},
+    {"title": "Power Points", "icon": "🔌", "description": "..."}
+  ]
 }
