@@ -6,11 +6,14 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "home"
+    label: "Home Page Content"
     files:
-      - label: "Home"
-        name: "home"
-        file: "index.html"
+      - label: "Hero Section"
+        name: "hero"
+        file: "content/home.json"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Badge", name: "hero.badge", widget: "string"}
+          - {label: "Title", name: "hero.title", widget: "string"}
+          - {label: "Subtitle", name: "hero.subtitle", widget: "text"}
+          - {label: "Call Now Text", name: "hero.call_now", widget: "string"}
