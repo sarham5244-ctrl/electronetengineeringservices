@@ -1,0 +1,118 @@
+site:
+  title: "Electronet Engineering Services | Perth Electrician | 0415 990 148"
+  description: "Electronet Engineering Services – Perth's trusted electrician for downlights, ceiling fans, power points, TV points and more. Fast response. Call 0415 990 148."
+  phone: "0415 990 148"
+  whatsapp: "+61415990148"
+
+nav:
+  logo:
+    icon: "⚡"
+    title: "Electronet"
+    subtitle: "Engineering Services"
+  links:
+    - label: "About"
+      href: "#about"
+    - label: "Services"
+      href: "#services"
+    - label: "Why Us"
+      href: "#why"
+    - label: "Reviews"
+      href: "#reviews"
+    - label: "Contact"
+      href: "#contact"
+
+hero:
+  badge: "Perth's Trusted Electrician"
+  title: "Reliable Electrical Solutions Across Perth"
+  subtitle: "Fast Response. Precision Workmanship. Professional Service. From downlights to power points — we've got Perth covered."
+  cta:
+    call: "📞 Call Now – 0415 990 148"
+    quote: "Request a Quote →"
+  stats:
+    - label: "Google Rating"
+      value: "4.5★"
+    - label: "5-Star Reviews"
+      value: "15+"
+    - label: "Response Time"
+      value: "<1hr"
+    - label: "Client Satisfaction"
+      value: "100%"
+
+about:
+  section_label: "About Electronet"
+  title: "Perth's Go-To Electrical Services Team"
+  body: "Electronet Engineering Services is a Perth-based electrical business built on responsiveness, precision, and genuine care for every client. Led by Moiz, our team delivers high-quality residential electrical work with attention to detail that keeps customers coming back."
+  image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+  badge:
+    stars: "★★★★★"
+    score: "4.5"
+    reviews: "15 Google Reviews"
+  checks:
+    - icon: "✓"
+      text: "Fast, reliable response. We respect your time. When you call, we show up – on time, every time."
+    - icon: "✓"
+      text: "Precision workmanship. Every job is completed to the highest standard, no shortcuts, no compromises."
+    - icon: "✓"
+      text: "Professional & friendly. Moiz and the team communicate clearly, work cleanly, and treat your home with respect."
+    - icon: "✓"
+      text: "Perth local, community trusted. Proudly serving Perth homeowners with fully licensed, safety-first electrical solutions."
+
+services:
+  section_label: "What We Do"
+  title: "Our Electrical Services"
+  body: "From feature lighting to power point upgrades, we handle all aspects of residential electrical work across Perth with speed and care."
+  items:
+    - icon: "💡"
+      title: "Downlight Installation"
+      description: "Precision placement of LED downlights for stunning, modern interiors."
+    - icon: "🔌"
+      title: "Power Point Upgrades"
+      description: "Safe and compliant installation of new power points or replacement of old ones."
+    - icon: "📺"
+      title: "TV Point Installation"
+      description: "Wall-mounted TVs with clean cable management."
+    - icon: "🌀"
+      title: "Ceiling Fan Installation"
+      description: "Expert installation and wiring for all ceiling fans."
+
+why_us:
+  section_label: "Why Choose Us"
+  title: "Trusted Perth Electrical Services"
+  features:
+    - icon: "⚡"
+      title: "Reliable"
+      description: "We never miss a deadline and ensure all work is compliant and safe."
+    - icon: "🛠️"
+      title: "Skilled Team"
+      description: "Trained electricians providing high-quality work every time."
+    - icon: "💬"
+      title: "Excellent Communication"
+      description: "We keep you informed and answer all your queries promptly."
+    - icon: "🏡"
+      title: "Community Trusted"
+      description: "Serving Perth with safety-first electrical solutions."
+
+testimonials:
+  section_label: "Reviews"
+  title: "What Our Clients Say"
+  items:
+    - stars: "★★★★★"
+      text: "Fantastic service, fast and professional. Highly recommended!"
+      name: "John D."
+      meta: "Homeowner, Perth"
+    - stars: "★★★★★"
+      text: "Moiz and the team did an excellent job installing our downlights."
+      name: "Sarah K."
+      meta: "Apartment Owner, Perth"
+
+cta_band:
+  title: "Ready to Get Started?"
+  subtitle: "Contact us today and experience the Electronet difference."
+  btn_text: "Request a Quote"
+  btn_link: "#contact"
+
+contact:
+  title: "Get in Touch"
+  phone: "0415 990 148"
+  email: "info@electronet.com.au"
+  address: "Perth, Western Australia"
